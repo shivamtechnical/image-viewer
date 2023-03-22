@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { data } from "./Data";
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="iii">
+        <div className="image">
+          <img src={require("./imageg/hills-615429__340.jpg")} alt="" />
+        </div>
+
+        <div className="slides">
+          {data.map((item) => (
+            <img className="img" key={item.id} src={item.img} alt="/" />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
